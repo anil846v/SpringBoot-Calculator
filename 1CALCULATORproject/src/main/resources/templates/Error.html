@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Calculator input Propting</title>
+	<style>
+	body{
+				text-align:center;
+			}
+			</style>
+		</head>
+		<body>
+			<h1>Calculation Result</h1>
+						<div>
+							<p><Strong>Result:</Strong><span th:text = "${result}"></span></p>
+						<p><Strong>Operation:</Strong><span th:text = "${operation}"></span></p>
+						<p><Strong>Error:</Strong><span th:text = "${error}"></span></p>
+<h2 style ="color:red;"><b>Something Error Please Try Again</b></h2>
+
+						</div>
+						<!--HERE BY DEFAULT THE METHOD IS SET AS GET WE WILL CHANGE IT TO POST IF WE WANT-->
+
+						<form action = "/gotresult" method="post">
+							<label for = "n1">Enter number 1 : </label>
+											<input type = "number" id ="n1" name ="n1" required>
+											<br>
+											
+											<label for = "n2">Enter number 2 : </label>
+										    <input type = "number" id ="n2" name ="n2" required>
+										
+											<div>
+												<button type ="submit" name ="operation" value ="ADDITION">Add</button>
+											<button type ="submit" name ="operation" value ="SUBTRACTION">Subtract</button>
+										<button type ="submit" name ="operation" value ="MULTIPLICATION">Multiply</button>
+									<button type ="submit" name ="operation" value ="DIVISION">Divide</button>
+									<button type ="submit" name ="operation" value = "mod">Modulus</button>
+
+									</div>
+						</form>
+		</body>
+</html>
