@@ -17,6 +17,7 @@ public class CalculatorController {
 		return "prompt";
 	}
 	//HERE BY DEFAULT THE METHOD IS SET AS GET WE WILL CHANGE IT TO GET IF WE WANT
+	//Here we are using Thymleaf dependency
 
 	@PostMapping("/gotresult")
 	public String calculate(@RequestParam("n1") double n1,@RequestParam("n2") double n2,@RequestParam("operation") String operation,Model m) {
